@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sunert/Scripts.git"
+    "url": "https://github.com/Sunert/Scripts.git"
   },
-  "keywords": [],
+  "keywords": ["中青看点,腾讯新闻等等"],
   "author": "",
   "license": "ISC",
   "bugs": {
