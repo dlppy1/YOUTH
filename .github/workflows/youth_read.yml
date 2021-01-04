@@ -15,6 +15,9 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
       YOUTH_READ: ${{ secrets.YOUTH_READ }}
+      YOUTH_READ2: ${{ secrets.YOUTH_READ2 }}
+      YOUTH_READ3: ${{ secrets.YOUTH_READ3 }}
+      YOUTH_READ4: ${{ secrets.YOUTH_READ4 }}
     steps:
       - name: Checkout
         uses: actions/checkout@v1
@@ -29,6 +32,27 @@ jobs:
       - name: '运行 【中青看点自动阅读一】'
         if: env.YOUTH_READ
         run: |
-          node youth_read.js
+          node Task/Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ }}
+
+      - name: '运行 【中青看点自动阅读二】'
+        if: env.YOUTH_READ2
+        run: |
+          node Task/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ2 }}
+          
+      - name: '运行 【中青看点自动阅读三】'
+        if: env.YOUTH_READ3
+        run: |
+          node Task/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ3 }}
+          
+      - name: '运行 【中青看点自动阅读四】'
+        if: env.YOUTH_READ4
+        run: |
+          node Task/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ4 }}
